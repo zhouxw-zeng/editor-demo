@@ -12,6 +12,10 @@ yarn dev
 pnpm dev
 # or
 bun dev
+# and
+nodejs 23.7.0;
+# UI 
+shadcnUI
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
