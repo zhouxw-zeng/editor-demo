@@ -14,7 +14,7 @@ import UserTools from "./UserTools"
 import Link from "next/link"
 export default function HeaderMenu() {
   return (
-    <div className="h-16 flex w-full items-center justify-between gap-2 px-4 py-2">
+    <div className="h-16 flex w-full items-center justify-between gap-2 px-4 py-2 border-b-2 shadow-sm">
       <NavigationMenu>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>

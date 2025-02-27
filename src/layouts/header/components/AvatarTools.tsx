@@ -10,7 +10,11 @@ const AvatarTool = ({children} : { children: ReactNode }) => {
   const [userInfo, setUserInfo]  = useLocalStorage("userInfo", "")
   const [popContent, setPopContent] = useState(<AsyncUserInfo />)
   useEffect(() => {
-    console.log(userInfo, "userInfo")
+    if (!userInfo) {
+      setPopContent(<AsyncLoginWin />)
+      return
+    }
+
   }, [userInfo])
   return (
     <Popover>
