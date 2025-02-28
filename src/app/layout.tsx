@@ -40,9 +40,9 @@ import 'katex/dist/katex.min.css';
 import type { Metadata, Viewport } from "next";
 import { type ReactNode } from "react";
 import { Providers } from "@/layouts/providers";
-
 const title = "Editor Demo";
 const description = "This is a Editor demo";
+import HeaderMenu from "@/layouts/header/Menu"
 
 export const metadata: Metadata = {
   title,
@@ -63,7 +63,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="cn" suppressHydrationWarning>
       <body>
-        <Providers>{children}</Providers>
+        <Providers >
+          <HeaderMenu/>
+          <div className="pt-16 box-content">
+            {children}
+          </div>
+          </Providers>
       </body>
     </html>
   );
