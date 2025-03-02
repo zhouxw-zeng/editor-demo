@@ -1,3 +1,4 @@
+// "use client"
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
@@ -37,12 +38,14 @@ import "@/styles/globals.css";
 import "@/styles/prosemirror.css";
 import 'katex/dist/katex.min.css';
 
-import type { Metadata, Viewport } from "next";
-import { type ReactNode } from "react";
-import { Providers } from "@/layouts/providers";
 const title = "Editor Demo";
 const description = "This is a Editor demo";
+
+import type { Metadata, Viewport } from "next";
+import { lazy, type ReactNode } from "react";
+import { Providers } from "@/layouts/providers";
 import HeaderMenu from "@/layouts/header/Menu"
+import Main from "@/layouts/main"
 
 export const metadata: Metadata = {
   title,
@@ -59,18 +62,19 @@ export const viewport: Viewport = {
   themeColor: "#ffffff"
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="cn" suppressHydrationWarning>
       <body>
         <Providers >
-          <HeaderMenu/>
-          <div className="pt-16 box-content">
+          <HeaderMenu />
+          <Main>
             {children}
-          </div>
+          </Main>
           </Providers>
       </body>
     </html>
   );
 }
+export default RootLayout
   

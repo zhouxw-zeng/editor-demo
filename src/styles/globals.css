@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --main-height: calc(100vh - 64px);
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -94,7 +96,9 @@
     @apply bg-background text-foreground;
   }
 }
-
+.main-height {
+  height: calc(100vh - 64px);
+}
 
 pre {
   background: #0d0d0d;

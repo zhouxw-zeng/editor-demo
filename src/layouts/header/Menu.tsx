@@ -14,7 +14,7 @@ import UserTools from "./UserTools"
 import Link from "next/link"
 export default function HeaderMenu() {
   return (
-    <div className="fixed h-16 flex w-full items-center justify-between gap-2 px-4 py-2 border-b-2 shadow-sm list-none">
+    <div className="fixed h-16 top-0 flex w-full items-center justify-between gap-2 px-4 py-2 border-b-2 shadow-sm list-none z-10">
       <NavigationMenu >
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
@@ -41,6 +41,13 @@ export default function HeaderMenu() {
           <Link href="/blog" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Blog
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/myLive" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            My live
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
