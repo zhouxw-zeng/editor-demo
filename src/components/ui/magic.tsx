@@ -1,4 +1,4 @@
-export default function Magic({ className }: { className: string }) {
+const Magic = ({ className }: { className: string }) => {
   return (
     <svg
       width="469"
@@ -30,3 +30,5 @@ export default function Magic({ className }: { className: string }) {
     </svg>
   );
 }
+
+export default Magic
